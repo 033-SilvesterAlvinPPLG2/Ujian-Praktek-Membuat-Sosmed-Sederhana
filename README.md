@@ -22,7 +22,7 @@ return (
 
 export default Navbar;
 ```
-2. UserCard berfungsi untuk menampilkan informasi setiap pengguna dalam bentuk kartu, Informasi yang ditampilkan adalah nama, username, dan email. Selain itu juga, terdapat tombol Like dan Follow. Fungsinya adalah menampilkan data pengguna pada tampilan pengguna yang menggunakannya.
+2. UserCard berfungsi untuk menampilkan informasi setiap pengguna dalam bentuk kartu, Informasi yang ditampilkan adalah nama, username, email dan terdapat tombol Like dan Follow. Fungsinya adalah menampilkan data pengguna pada tampilan pengguna yang menggunakannya.
 
 ``` javascript
 import React, { useEffect, useState } from 'react';
@@ -127,7 +127,7 @@ export default UsersList;
 
 ```
 
-4. Footer berfungsi sebagai bagian bawah pada website yang tujuannya adalah menampilkan informasi tambahan, seperti nama perusahaan, hak cipta, dan informasi dari perusahaan. Fungsinya adalah memberikan informasi kepada pengguna mengenai informasi tentang perusahaan yang membuat aplikasi atau web tersebut.
+4. Footer berfungsi sebagai bagian bawah pada website yang tujuannya adalah menampilkan informasi tambahan, seperti nama perusahaan, hak cipta, dan informasi tambahan dari perusahaan. Fungsinya adalah memberikan informasi kepada pengguna mengenai informasi tentang perusahaan yang membuat aplikasi atau web tersebut.
 
 ``` javascript
 import React from 'react'; 
@@ -156,9 +156,37 @@ Fetch API digunakan untuk mengambil atau mengirim data ke server, Biasanya untuk
 
 ``` javascript
 useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then((res) => res.json())
-            .then((data) => setUsers(data))
-            .catch((err) => console.error(err));
-    }, []);
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then((res) => res.json())
+        .then((data) => setUsers(data))
+        .catch((err) => console.error(err));
+}, []);
 ```
+# *Penggunaan React Hook Menggunakan useState, useEffect, useContext, dan useRef*
+1. useState adalah React hook yang digunakan untuk merubah data di dalam sebuah komponen
+
+``` javascript
+const [isLiked, setIsLiked] = useState(false);
+const [isFollowed, setIsFollowed] = useState(false);
+```
+untuk merubah data belum like menjadi like dan merubah belum mengikuti menjadi pengikut
+
+``` javascript
+const [users, setUsers] = useState([]);
+const [searchTerm, setSearchTerm] = useState('');
+```
+untuk mendata setiap pengguna dan mencari data pengguna
+
+2. useEffect adalah React hook yang digunakan untuk memberikan side effect atau efek samping ke dalam komponen kita
+
+``` javascript
+useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then((res) => res.json())
+        .then((data) => setUsers(data))
+        .catch((err) => console.error(err));
+}, []);
+```
+mengambil data dari API setelah komponen dirender.
+
+3. 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 function UserCard (props) {
     const [isLiked, setIsLiked] = useState(false);
