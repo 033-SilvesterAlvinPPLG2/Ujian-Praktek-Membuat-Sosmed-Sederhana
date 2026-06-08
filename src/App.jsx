@@ -3,9 +3,11 @@ import Navbar from './components/navbar';
 import UserCard from './components/userCard';
 import UsersList from './components/usersList';
 import Footer from './components/footer';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
 return (
+    <ThemeProvider>
     <div className="App">
     <Navbar />
     <div style={{ padding: '2rem' }}>
@@ -15,6 +17,7 @@ return (
     <Footer />
     </div>
     </div>
+    </ThemeProvider>
 );
 }
 
