@@ -35,5 +35,42 @@ font-size: 1rem;
 }
 
 .nav-links a:hover {
-  color: #4CAF50; /* Warna saat menu di-hover */
+color: #4CAF50;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    font-family: sans-serif;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name {
+    margin: 15px 0 5px 0;
+}
+.role {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.bio {
+    font-size: 14px;
+}
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
 }
